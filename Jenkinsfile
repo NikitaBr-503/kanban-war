@@ -10,7 +10,7 @@ node {
    stage('Mvn Build'){
 	   // Build using maven
 	   def mvnHome = tool name: 'maven3', type: 'maven'
-	   sh "${mvnHome}/bin/mvn clean install"
+	   sh "${mvnHome}/bin/mvn package"
    }
 
 }
