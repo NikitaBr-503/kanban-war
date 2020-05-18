@@ -11,3 +11,5 @@ node {
 	   // Build using maven
 	   sh "mvn clean install"
    }
+
+}
