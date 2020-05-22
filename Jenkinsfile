@@ -9,13 +9,13 @@ node {
 	   sh "${mvnHome}/bin/mvn package"
    }
 
-   stage('deploy to tomcat'){
+/*   stage('deploy to tomcat'){
       sshagent(['tomcat-dev']) {
-	      sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@172.31.94.152:/usr/share/tomcat8/webapps'
+	      sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@3.83.87.205:/usr/share/tomcat8/webapps'
       }
-   }
+   }*/
 
-   stage('copy to directory'){
+   stage('deploy to tomcat'){
          sshagent(['tomcat-dev']) {
    	      sh """
    	         scp -o StrictHostKeyChecking=no target/*.war ec2-user@3.83.87.205:/app
