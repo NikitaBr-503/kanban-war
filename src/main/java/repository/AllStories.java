@@ -15,9 +15,9 @@ import com.google.common.collect.ImmutableList;
 
 public class AllStories {
     private List<Story> stories = newArrayList( //
-            new Story(1, "TODO", "sleep at night"), //
-            new Story(2, "WIP", "rest in front of the tv"), //
-            new Story(3, "DONE", "eat. a lot."));
+            new Story(1, "TODO", "create new endpoint"), //
+            new Story(2, "WIP", "create automation tests"), //
+            new Story(3, "DONE", ""));
     private Integer lastId = 3;
 
     public List<Story> list() {
