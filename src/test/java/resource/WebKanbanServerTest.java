@@ -37,12 +37,6 @@ public class WebKanbanServerTest {
 				.when().get("http://127.0.0.1:4242/stories.json");
 	}
 
-	@Test
-	public void should_change_story_state() {
-		expect().statusCode(200).when().post("http://127.0.0.1:4242/story/1/WIP").thenReturn();
-		expect().body("stories.state", hasItems("WIP", "WIP", "DONE")).and() //
-				.when().get("http://127.0.0.1:4242/stories.json");
-	}
 
 	@Test
 	public void should_add_story() {
@@ -61,13 +55,6 @@ public class WebKanbanServerTest {
 		expect().body("stories.id", not(hasItem(2))).and() //
 				.when().get("http://127.0.0.1:4242/stories.json");
 	}
-
-/*	@Test
-	public void should_not_add_existing_story() {
-		expect().statusCode(400).content(equalTo("The story 'create new endpoint' already exists.")) //
-				.header("Content-Type", endsWith("; charset=UTF-8")) //
-				.when().put("http://127.0.0.1:4242/story/sleep at night").thenReturn();
-	}*/
 
 	@Test
 	public void with_an_empty_label_should_not_add_story() {

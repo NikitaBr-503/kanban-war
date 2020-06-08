@@ -56,15 +56,6 @@ public class AllStoriesTest {
 		}
 	}
 
-	/*@Test(expected = IllegalArgumentException.class)
-	public void should_not_add_an_existing_story() {
-		try {
-			allStories.add("DONE", "sleep at night");
-		} catch (IllegalArgumentException e) {
-			assertThat(e).hasMessage("The story 'sleep at night' already exists.");
-			throw e;
-		}
-	}*/
 
 	@Test
 	public void should_update_a_new_story() {
